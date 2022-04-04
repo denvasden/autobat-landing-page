@@ -1,0 +1,5 @@
+@function scale-down($value, $scale) {
+  $result: $value - ($value * $scale);
+  
+  @return $result;
+}

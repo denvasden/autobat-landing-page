@@ -1,0 +1,35 @@
+@import "functions";
+
+// $min-size: minimum element $property size in $unit specified
+// $max-size: maximum element $property size in $unit specified
+// $min-width: the screen width in $units where you want to lock in the $min-size
+// $max-width: the screen width in $units where you want to lock in the $max-size
+// $property: the property of the element that you would like to scale/lock
+// $unit: the units which all measurements are taken in
+@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px) {
+  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+  
+  @media (max-width: #{$min-width}#{$unit}) {
+    #{$property}: #{$min-size}#{$unit};
+  }
+  
+  @media (min-width: #{$max-width}#{$unit}) {
+    #{$property}: #{$max-size}#{$unit};
+  }
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($min, $unit: px) {
+  @if $min {
+    @media (min-width: #{$min}#{$unit}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin scale-down-css-lock($size, $scale, $min-width, $max-width, $property, $unit: px) {
+  @include css-lock(scale-down($size, $scale), $size, $min-width, $max-width, $property, $unit);
+}
