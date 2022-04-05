@@ -1,0 +1,25 @@
+.contact-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .contact-us_item {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .contact-us_heading {
+  }
+
+  .contact-us_text-content {
+  }
+
+  .contact-us_cta {
+  }
+
+  .contact-us_text-content + .contact-us_cta {
+    margin-top: 34px;
+  }
+}

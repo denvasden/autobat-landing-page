@@ -1,0 +1,29 @@
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/button";
+@import "./components/contact-us";
+@import "./components/link";
+@import "./components/logo";
+@import "./components/our-team";
+@import "./components/we-are-grateful";
+
+@import "./layout/section";
+
+@import "./sections/section-about-us";
+@import "./sections/section-album";
+@import "./sections/section-contact-us";
+@import "./sections/section-contacts";
+@import "./sections/section-help-us";
+@import "./sections/section-i-need-a-car";
+@import "./sections/section-hero";
+@import "./sections/section-logo";
+@import "./sections/section-our-team";
+@import "./sections/section-social-media";
+@import "./sections/section-want-to-help";
+@import "./sections/section-we-are-grateful";
+@import "./sections/section-whom-we-helped";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}

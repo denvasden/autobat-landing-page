@@ -1,0 +1,21 @@
+.section-social-media {
+  background-color: #0046ff;
+  padding-bottom: 30px;
+  padding-top: 34px;
+
+  .section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .button-group {
+      max-width: 324px;
+    }
+
+    .heading + .button-group {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.section-help-us {
+  background-color: #000000;
+  padding-bottom: 70px;
+  padding-top: 50px;
+
+  .section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .heading + .button-group {
+      margin-top: 48px;
+    }
+
+    .button-group + .button {
+      margin-top: 56px;
+    }
+  }
+}

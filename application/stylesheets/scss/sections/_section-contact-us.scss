@@ -1,0 +1,17 @@
+.section-contact-us {
+  background-color: #000000;
+  padding-bottom: 50px;
+  padding-top: 54px;
+
+  .section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .heading + .contact-us {
+      margin-top: 44px;
+    }
+  }
+}

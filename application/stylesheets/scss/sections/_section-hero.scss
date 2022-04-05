@@ -1,0 +1,22 @@
+.section-hero {
+  background-color: #0046ff;
+  padding-bottom: 34px;
+  padding-top: 100px;
+
+  .section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .heading {
+      max-width: 680px;
+      text-align: center;
+    }
+
+    .heading + .button {
+      margin-top: 46px;
+    }
+  }
+}

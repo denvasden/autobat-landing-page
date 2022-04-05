@@ -1,0 +1,24 @@
+.section-contacts {
+  background-color: #0046ff;
+  padding-bottom: 30px;
+  padding-top: 40px;
+
+  .section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .contacts {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: 0;
+      width: 50%;
+    }
+  }
+}

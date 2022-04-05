@@ -1,0 +1,36 @@
+.our-team {
+  column-gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .our-team_item {
+
+  }
+
+  .our-team_graphic-content {
+    align-items: center;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 212px;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 212px;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  .our-team_text-content {
+
+  }
+
+  .our-team_graphic-content + .our-team_text-content {
+    margin-top: 32px;
+  }
+}
