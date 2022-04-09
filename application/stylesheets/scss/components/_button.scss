@@ -7,8 +7,8 @@
   flex-wrap: nowrap;
   font-size: 24px;
   font-weight: 600;
-  height: 52px;
   justify-content: center;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -16,10 +16,45 @@
 .button-group {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+
+  @include media(">=tablet") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .button + .button {
+    margin-top: 16px;
+
+    @include media(">=tablet") {
+      margin-top: 0;
+    }
+  }
+}
+
+.button-group--donate {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+
+  @include media(">tablet") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .button + .button {
+    margin-top: 16px;
+
+    @include media(">tablet") {
+      margin-top: 0;
+    }
+  }
 }
 
 .button-contact-us {
@@ -36,7 +71,11 @@
   border-color: #0046ff;
   color: #000000;
   height: 52px;
-  width: 208px;
+  width: 100%;
+
+  @include media(">=tablet") {
+    width: 208px;
+  }
 
   .button_title {
     font-size: 24px;
@@ -51,9 +90,14 @@
   background-color: #000000;
   border-color: #ffffff;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 16px;
   height: 52px;
-  width: 614px;
+  width: 100%;
+
+  @include media(">=tablet") {
+    font-size: 24px;
+    width: 614px;
+  }
 }
 
 .button--hero {
@@ -70,7 +114,11 @@
   border-color: #000000;
   color: #ffffff;
   height: 52px;
-  width: 382px;
+  width: 100%;
+
+  @include media(">=tablet") {
+    width: 382px;
+  }
 }
 
 .button--social-media {
@@ -87,5 +135,9 @@
   border-color: #000000;
   color: #ffffff;
   height: 52px;
-  width: 488px;
+  width: 100%;
+
+  @include media(">=tablet") {
+    width: 488px;
+  }
 }

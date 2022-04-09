@@ -4,21 +4,30 @@
   padding-top: 40px;
 
   .section {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
 
-    .contacts {
+    @include media(">=tablet") {
       align-items: flex-start;
+    }
+
+    .contacts {
+      align-items: center;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: center;
-      margin-left: auto;
-      margin-right: 0;
-      width: 50%;
+
+
+      @include media(">=tablet") {
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: 0;
+        width: 50%;
+      }
     }
   }
 }

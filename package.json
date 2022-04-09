@@ -50,6 +50,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "include-media": "^1.4.10"
   },
   "browserslist": [
     "defaults"

@@ -1,6 +1,12 @@
 .contact-us {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 32px;
+
+  @include media(">=tablet") {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
 
   .contact-us_item {
     align-items: flex-start;

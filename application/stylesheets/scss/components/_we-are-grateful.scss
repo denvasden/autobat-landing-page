@@ -1,5 +1,9 @@
 .we-are-grateful {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 100%;
+
+  @include media(">=tablet") {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
