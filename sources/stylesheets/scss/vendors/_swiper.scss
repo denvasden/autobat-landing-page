@@ -1,0 +1,31 @@
+@import "~swiper/swiper-bundle.css";
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #bbbdbf;
+
+  @include media("<tablet") {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  left: -36px;
+}
+
+.swiper-button-next {
+  right: -36px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #d0d2d3;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #929497;
+}

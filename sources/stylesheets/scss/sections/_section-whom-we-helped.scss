@@ -9,5 +9,9 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+
+    .heading + .gallery {
+      margin-top: 24px;
+    }
   }
 }

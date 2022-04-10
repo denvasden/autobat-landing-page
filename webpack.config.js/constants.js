@@ -1,7 +1,7 @@
 const chalk = require("chalk");
 const path = require("path");
 
-const context = path.resolve(process.cwd(), "application");
+const context = path.resolve(process.cwd(), "sources");
 const entry = path.resolve(context, "javascript/index.js");
 const output = path.resolve(process.cwd(), "bundle");
 

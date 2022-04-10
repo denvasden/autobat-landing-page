@@ -1,10 +1,13 @@
 @import "~include-media/dist/include-media";
 
+@import "./vendors/swiper";
+
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/button";
 @import "./components/contact-us";
+@import "./components/gallery";
 @import "./components/link";
 @import "./components/logo";
 @import "./components/our-team";
