@@ -1,5 +1,7 @@
 body.modal-window--active {
-  overflow: hidden;
+  @include media(">=desktop") {
+    overflow: hidden;
+  }
 }
 
 .modal-window {
@@ -37,5 +39,7 @@ body.modal-window--active {
 }
 
 .modal-window.modal-window--active {
-  display: block;
+  @include media(">=desktop") {
+    display: block;
+  }
 }
