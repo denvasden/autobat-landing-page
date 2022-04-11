@@ -1,4 +1,38 @@
-.gallery {
+.gallery-modal-window {
+  width: 100%;
+
+  .gallery_item {
+  }
+
+  .gallery_graphic-content {
+    background: #0046ff;
+    height: 584px;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .gallery_text-content {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    span {
+      font-weight: 600;
+      padding-right: 4px;
+    }
+  }
+
+  .gallery_graphic-content + .gallery_text-content {
+    margin-top: 60px;
+  }
+}
+
+.gallery-whom-we-helped {
   height: 472px;
   position: relative;
   width: 100%;
@@ -7,6 +41,7 @@
     background: #ffffff;
     border: 2px solid #000000;
     border-radius: 16px;
+    cursor: pointer;
     height: 434px;
     padding: 16px 12px;
   }

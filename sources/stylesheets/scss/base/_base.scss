@@ -6,9 +6,11 @@
 
 body {
   margin: 0;
+  position: relative;
 }
 
 html {
+  position: relative;
   scroll-behavior: smooth;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

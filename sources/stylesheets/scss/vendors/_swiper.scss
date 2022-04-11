@@ -8,18 +8,6 @@
 .swiper-button-prev,
 .swiper-button-next {
   color: #bbbdbf;
-
-  @include media("<tablet") {
-    display: none;
-  }
-}
-
-.swiper-button-prev {
-  left: -36px;
-}
-
-.swiper-button-next {
-  right: -36px;
 }
 
 .swiper-pagination-bullet {
@@ -28,4 +16,38 @@
 
 .swiper-pagination-bullet-active {
   background: #929497;
+}
+
+.gallery-modal-window {
+  .swiper-button-prev {
+    left: 16px;
+  }
+
+  .swiper-button-next {
+    right: 16px;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 100px;
+  }
+}
+
+.gallery-whom-we-helped {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include media("<tablet") {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -36px;
+  }
+
+  .swiper-button-next {
+    right: -36px;
+  }
 }

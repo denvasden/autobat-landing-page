@@ -1,0 +1,41 @@
+body.modal-window--active {
+  overflow: hidden;
+}
+
+.modal-window {
+  background: rgba(#000000, 0.5);
+  display: none;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+
+  .modal-window_content {
+    background: #ffffff;
+    border: none;
+    border-radius: 32px;
+    left: 50%;
+    max-width: 862px;
+    padding: 68px 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    .modal-window_close {
+      cursor: pointer;
+      height: 34px;
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      width: 34px;
+    }
+  }
+}
+
+.modal-window.modal-window--active {
+  display: block;
+}
