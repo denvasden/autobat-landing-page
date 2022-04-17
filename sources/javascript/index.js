@@ -5,7 +5,8 @@ import { ModalWindow } from "./components/ModalWindow";
 import "../stylesheets/scss/index.scss";
 
 const DONATION_TYPES = {
-  FONDY: "FONDY"
+  FONDY: "FONDY",
+  FONDY_MONTHLY: "FONDY_MONTHLY"
 }
 
 class Index {
@@ -22,7 +23,10 @@ class Index {
   handleDonateButtonClick({ currency = "UAH", donationType = DONATION_TYPES.FONDY } = {}) {
     switch (donationType) {
       case DONATION_TYPES.FONDY:
-        window.open(this.initializeFondy(currency), "_blank");
+      case DONATION_TYPES.FONDY_MONTHLY:
+        const monthly = donationType === DONATION_TYPES.FONDY_MONTHLY;
+
+        window.open(this.initializeFondy(currency, monthly), "_blank");
         break;
 
       default:
@@ -38,12 +42,20 @@ class Index {
     this.initializeListeners();
   }
 
-  initializeFondy(currency) {
+  initializeFondy(currency = "UAH", monthly = false) {
     const button = $ipsp.get("button");
 
-    button.setAmount("", currency.toLowerCase());
+    button.setAmount("", currency.toUpperCase());
     button.setHost("pay.fondy.eu");
     button.setMerchantId(1503170);
+
+    if (monthly) {
+      button.addRecurringData({
+        every: 1,
+        period: "month"
+      });
+      button.setRecurringState(true);
+    }
 
     return button.getUrl();
   }
@@ -52,6 +64,10 @@ class Index {
     document.querySelector(".button--donate-eur").addEventListener("click", (event) => {
       event.preventDefault();
       this.handleDonateButtonClick({ currency: "eur", donationType: DONATION_TYPES.FONDY });
+    });
+    document.querySelector(".button--donate-monthly").addEventListener("click", (event) => {
+      event.preventDefault();
+      this.handleDonateButtonClick({ currency: "uah", donationType: DONATION_TYPES.FONDY_MONTHLY });
     });
     document.querySelector(".button--donate-uah").addEventListener("click", (event) => {
       event.preventDefault();
