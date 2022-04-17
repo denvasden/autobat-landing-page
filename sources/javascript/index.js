@@ -4,6 +4,10 @@ import { ModalWindow } from "./components/ModalWindow";
 
 import "../stylesheets/scss/index.scss";
 
+const DONATION_TYPES = {
+  FONDY: "FONDY"
+}
+
 class Index {
   modalWindow;
   swiperModalWindow;
@@ -15,10 +19,44 @@ class Index {
     this.initialize();
   }
 
+  handleDonateButtonClick({ currency = "UAH", donationType = DONATION_TYPES.FONDY } = {}) {
+    switch (donationType) {
+      case DONATION_TYPES.FONDY:
+        window.open(this.initializeFondy(currency), "_blank");
+        break;
+
+      default:
+        break;
+    }
+  }
+
   initialize() {
     this.initializeSwiperWhomWeHelped();
     this.initializeSwiperModalWindow();
     this.initializeModalWindow();
+
+    this.initializeListeners();
+  }
+
+  initializeFondy(currency) {
+    const button = $ipsp.get("button");
+
+    button.setAmount("", currency.toLowerCase());
+    button.setHost("pay.fondy.eu");
+    button.setMerchantId(1503170);
+
+    return button.getUrl();
+  }
+
+  initializeListeners() {
+    document.querySelector(".button--donate-eur").addEventListener("click", (event) => {
+      event.preventDefault();
+      this.handleDonateButtonClick({ currency: "eur", donationType: DONATION_TYPES.FONDY });
+    });
+    document.querySelector(".button--donate-uah").addEventListener("click", (event) => {
+      event.preventDefault();
+      this.handleDonateButtonClick({ currency: "uah", donationType: DONATION_TYPES.FONDY });
+    });
   }
 
   initializeModalWindow() {
