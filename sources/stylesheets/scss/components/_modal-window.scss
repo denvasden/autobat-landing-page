@@ -1,7 +1,5 @@
 body.modal-window--active {
-  @include media(">=desktop") {
-    overflow: hidden;
-  }
+  overflow: hidden;
 }
 
 .modal-window {
@@ -41,5 +39,13 @@ body.modal-window--active {
 .modal-window.modal-window--active {
   @include media(">=desktop") {
     display: block;
+  }
+}
+
+.modal-window_open {
+  pointer-events: none;
+
+  @include media(">=desktop") {
+    pointer-events: initial;
   }
 }
