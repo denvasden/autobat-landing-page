@@ -82,10 +82,10 @@ class Index {
   }
 
   initializeScroll() {
-    document.querySelectorAll("[data-target-id]").forEach(node => {
+    document.querySelectorAll("[data-scroll-target-id]").forEach(node => {
       node.addEventListener("click", (event) => {
         event.preventDefault();
-        document.getElementById(event.target.dataset.targetId).scrollIntoView();
+        document.getElementById(event.target.dataset.scrollTargetId).scrollIntoView();
       });
     });
   }
