@@ -1,5 +1,6 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
+import { cars } from "./data/cars";
 import { ModalWindow } from "./components/ModalWindow";
 
 import "../stylesheets/scss/index.scss";
@@ -35,6 +36,7 @@ class Index {
   }
 
   initialize() {
+    this.initializeScroll();
     this.initializeSwiperWhomWeHelped();
     this.initializeSwiperModalWindow();
     this.initializeModalWindow();
@@ -79,8 +81,21 @@ class Index {
     this.modalWindow = new ModalWindow();
   }
 
+  initializeScroll() {
+    document.querySelectorAll("[data-target-id]").forEach(node => {
+      node.addEventListener("click", (event) => {
+        event.preventDefault();
+        document.getElementById(event.target.dataset.targetId).scrollIntoView();
+      });
+    });
+  }
+
   initializeSwiperWhomWeHelped() {
     this.swiperWhomWeHelpedNode = document.querySelector(".swiper-whom-we-helped");
+
+    const swiperWrapperNode = this.swiperWhomWeHelpedNode.querySelector(".swiper-wrapper");
+
+    initializeSwiperSlides(swiperWrapperNode)
 
     this.swiperWhomWeHelped = new Swiper(this.swiperWhomWeHelpedNode, {
       breakpoints: {
@@ -108,6 +123,46 @@ class Index {
         type: "bullets",
       }
     });
+
+    function initializeSwiperSlides(node) {
+      const documentFragment = document.createDocumentFragment();
+
+      cars.forEach(car => {
+        const swiperSlideNode = document.createElement("div");
+        swiperSlideNode.classList.add("swiper-slide");
+
+        const galleryItemNode = document.createElement("div");
+        galleryItemNode.classList.add("gallery_item", "modal-window_open");
+
+        const galleryGraphicContentNode = document.createElement("div");
+        galleryGraphicContentNode.classList.add("gallery_graphic-content");
+
+        const galleryTextContentNode = document.createElement("div");
+        galleryTextContentNode.classList.add("gallery_text-content");
+
+        const ulNode = document.createElement("ul");
+        const lis = car.description.map(description => {
+          const liNode = document.createElement("li");
+          const pNode = document.createElement("p");
+          const spanNode = document.createElement("span");
+
+          spanNode.append(description.title);
+          pNode.append(spanNode, description.value);
+          liNode.append(pNode);
+
+          return liNode;
+        });
+
+        ulNode.append(...lis);
+        galleryTextContentNode.append(ulNode);
+        galleryItemNode.append(galleryGraphicContentNode, galleryTextContentNode);
+        swiperSlideNode.append(galleryItemNode);
+
+        documentFragment.append(swiperSlideNode);
+      });
+
+      node.append(documentFragment);
+    }
   }
 
   initializeSwiperModalWindow() {
