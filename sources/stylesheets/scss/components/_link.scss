@@ -1,4 +1,9 @@
-.link {
+.link,
+.link:active,
+.link:focus,
+.link:hover,
+.link:visited {
+  color: #0046ff;
 }
 
 .link--contacts {

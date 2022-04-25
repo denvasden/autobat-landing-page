@@ -1,5 +1,5 @@
-.cryptocurrency-donation-details {
-  .cryptocurrency-donation-details_item {
+.donation-details {
+  .donation-details_item {
     .heading {
       font-size: 14px;
 
@@ -26,7 +26,7 @@
     }
   }
 
-  .cryptocurrency-donation-details_item + .cryptocurrency-donation-details_item {
+  .donation-details_item + .donation-details_item {
     margin-top: 16px;
 
     @include media(">=tablet") {

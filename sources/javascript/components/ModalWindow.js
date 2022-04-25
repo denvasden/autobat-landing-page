@@ -25,11 +25,13 @@ class ModalWindow {
     this.modalWindowOpenNodes.forEach(node => node.addEventListener("click", this.handleModalWindowOpen.bind(this)));
   }
 
-  handleModalWindowClose() {
+  handleModalWindowClose(event) {
+    event.preventDefault();
     this.close();
   }
 
-  handleModalWindowOpen() {
+  handleModalWindowOpen(event) {
+    event.preventDefault();
     this.open();
   }
 
