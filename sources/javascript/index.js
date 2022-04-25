@@ -12,6 +12,8 @@ const DONATION_TYPES = {
 
 class Index {
   modalWindow;
+  modalWindowCryptocurrency;
+  modalWindowPayPal;
   swiperModalWindow;
   swiperModalWindowNode;
   swiperWhomWeHelped;
@@ -40,6 +42,8 @@ class Index {
     this.initializeSwiperWhomWeHelped();
     this.initializeSwiperModalWindow();
     this.initializeModalWindow();
+    this.initializeModalWindowCryptocurrency();
+    this.initializeModalWindowPayPal();
 
     this.initializeListeners();
   }
@@ -79,6 +83,20 @@ class Index {
 
   initializeModalWindow() {
     this.modalWindow = new ModalWindow();
+  }
+
+  initializeModalWindowCryptocurrency() {
+    this.modalWindowCryptocurrency = new ModalWindow({
+      modalWindowSelector: ".modal-window-cryptocurrency",
+      modalWindowOpenSelector: ".modal-window-cryptocurrency_open",
+    });
+  }
+
+  initializeModalWindowPayPal() {
+    this.modalWindowPayPal = new ModalWindow({
+      modalWindowSelector: ".modal-window-paypal",
+      modalWindowOpenSelector: ".modal-window-paypal_open",
+    });
   }
 
   initializeScroll() {

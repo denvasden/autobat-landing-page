@@ -1,0 +1,36 @@
+.cryptocurrency-donation-details {
+  .cryptocurrency-donation-details_item {
+    .heading {
+      font-size: 14px;
+
+      @include media(">=tablet") {
+        font-size: 16px;
+      }
+    }
+
+    .text-content {
+      font-size: 12px;
+      white-space: nowrap;
+
+      @include media(">=tablet") {
+        font-size: 16px;
+      }
+    }
+
+    .heading + .text-content {
+      margin-top: 4px;
+
+      @include media(">=tablet") {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .cryptocurrency-donation-details_item + .cryptocurrency-donation-details_item {
+    margin-top: 16px;
+
+    @include media(">=tablet") {
+      margin-top: 32px;
+    }
+  }
+}

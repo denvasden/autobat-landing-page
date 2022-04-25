@@ -3,9 +3,13 @@ body.modal-window--active {
 }
 
 .modal-window {
+  align-items: center;
   background: rgba(#000000, 0.5);
   display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
   height: 100vh;
+  justify-content: center;
   left: 0;
   overflow: hidden;
   position: fixed;
@@ -17,29 +21,36 @@ body.modal-window--active {
     background: #ffffff;
     border: none;
     border-radius: 32px;
-    left: 50%;
-    max-width: 862px;
-    padding: 68px 30px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    padding: 64px 16px;
+    position: relative;
+
+    @include media(">=tablet") {
+      padding: 68px 30px;
+    }
 
     .modal-window_close {
       cursor: pointer;
-      height: 34px;
+      height: 24px;
       position: absolute;
       right: 18px;
       top: 18px;
-      width: 34px;
+      width: 24px;
+
+      @include media(">=tablet") {
+        height: 34px;
+        width: 34px;
+      }
     }
   }
 }
 
-.modal-window.modal-window--active {
-  @include media(">=desktop") {
-    display: block;
+.modal-window-cryptocurrency {
+  .modal-window_content {
   }
+}
+
+.modal-window.modal-window--active {
+  display: flex;
 }
 
 .modal-window_open {

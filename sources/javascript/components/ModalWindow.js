@@ -16,12 +16,12 @@ class ModalWindow {
   initialize({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector } = {}) {
     this.bodyNode = document.querySelector("body");
     this.modalWindowNode = document.querySelector(modalWindowSelector || MODAL_WINDOW_SELECTOR);
-    this.modalWindowCloseNode = document.querySelector(modalWindowCloseSelector || MODAL_WINDOW_CLOSE_SELECTOR);
+    this.modalWindowCloseNodes = document.querySelectorAll(modalWindowCloseSelector || MODAL_WINDOW_CLOSE_SELECTOR);
     this.modalWindowOpenNodes = document.querySelectorAll(modalWindowOpenSelector || MODAL_WINDOW_OPEN_SELECTOR)
   }
 
   initializeListeners() {
-    this.modalWindowCloseNode.addEventListener("click", this.handleModalWindowClose.bind(this));
+    this.modalWindowCloseNodes.forEach(node => node.addEventListener("click", this.handleModalWindowClose.bind(this)));
     this.modalWindowOpenNodes.forEach(node => node.addEventListener("click", this.handleModalWindowOpen.bind(this)));
   }
 
