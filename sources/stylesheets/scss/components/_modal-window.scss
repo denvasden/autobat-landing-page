@@ -45,7 +45,7 @@ body.modal-window--active {
 .modal-window_open {
   pointer-events: none;
 
-  @include media(">=desktop") {
-    pointer-events: initial;
-  }
+  //@include media(">=desktop") {
+  //  pointer-events: initial;
+  //}
 }

@@ -47,7 +47,9 @@
   }
 
   .gallery_graphic-content {
-    background: #0046ff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 212px;
     width: 100%;
   }

@@ -57,12 +57,20 @@
   }
 }
 
-.button-contact-us {
+.button--complete-the-questionnaire,
+.button--contact-us {
   background: #000000;
   border-color: #ffffff;
   color: #ffffff;
   font-size: 18px;
   height: 32px;
+}
+
+.button--complete-the-questionnaire {
+  width: 240px;
+}
+
+.button--contact-us {
   width: 142px;
 }
 

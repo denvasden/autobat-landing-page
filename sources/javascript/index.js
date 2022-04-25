@@ -136,6 +136,7 @@ class Index {
 
         const galleryGraphicContentNode = document.createElement("div");
         galleryGraphicContentNode.classList.add("gallery_graphic-content");
+        galleryGraphicContentNode.style.backgroundImage = `url("${car.image}")`;
 
         const galleryTextContentNode = document.createElement("div");
         galleryTextContentNode.classList.add("gallery_text-content");

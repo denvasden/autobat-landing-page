@@ -1,3 +1,42 @@
+import hyundaiH1_1 from "../../images/hyundai-h1/hyundai-h1-1.jpg";
+import hyundaiH1_2 from "../../images/hyundai-h1/hyundai-h1-2.jpeg";
+import hyundaiH1_3 from "../../images/hyundai-h1/hyundai-h1-3.jpeg";
+import hyundaiH1_4 from "../../images/hyundai-h1/hyundai-h1-4.jpeg";
+import hyundaiH1_5 from "../../images/hyundai-h1/hyundai-h1-5.jpeg";
+import hyundaiH1_6 from "../../images/hyundai-h1/hyundai-h1-6.jpeg";
+import hyundaiH14wd_1 from "../../images/hyundai-h1-4wd/hyundai-h1-4wd-1.jpg";
+import landCruiser_1 from "../../images/land-cruiser/land-cruiser-1.jpeg";
+import landCruiser_2 from "../../images/land-cruiser/land-cruiser-2.jpeg";
+import landCruiser_3 from "../../images/land-cruiser/land-cruiser-3.jpeg";
+import landCruiser_4 from "../../images/land-cruiser/land-cruiser-4.jpeg";
+import landCruiser_5 from "../../images/land-cruiser/land-cruiser-5.jpeg";
+import landRoverFreelander_1 from "../../images/land-rover-freelander/land-rover-freelander-1.jpeg";
+import landRoverFreelander_2 from "../../images/land-rover-freelander/land-rover-freelander-2.jpeg";
+import landRoverFreelander_3 from "../../images/land-rover-freelander/land-rover-freelander-3.jpeg";
+import landRoverFreelander_4 from "../../images/land-rover-freelander/land-rover-freelander-4.jpeg";
+import landRoverFreelander_5 from "../../images/land-rover-freelander/land-rover-freelander-5.jpeg";
+import landRoverFreelander_6 from "../../images/land-rover-freelander/land-rover-freelander-6.jpeg";
+import landRoverFreelander_7 from "../../images/land-rover-freelander/land-rover-freelander-7.jpeg";
+import landRoverFreelander_8 from "../../images/land-rover-freelander/land-rover-freelander-8.jpeg";
+import mercedes_1 from "../../images/mercedes/mercedes-1.png";
+import mitsubishiL200_1 from "../../images/mitsubishi-l200/mitsubishi-l200-1.jpeg";
+import mitsubishiL200_2 from "../../images/mitsubishi-l200/mitsubishi-l200-2.jpeg";
+import mitsubishiL200_3 from "../../images/mitsubishi-l200/mitsubishi-l200-3.jpeg";
+import mitsubishiL200_4 from "../../images/mitsubishi-l200/mitsubishi-l200-4.jpeg";
+import mitsubishiL200_5 from "../../images/mitsubishi-l200/mitsubishi-l200-5.jpeg";
+import pajeroSport_1 from "../../images/pajero-sport/pajero-sport-1.jpeg";
+import pajeroSport_2 from "../../images/pajero-sport/pajero-sport-2.jpeg";
+import ssangyongRexton_1 from "../../images/ssangyong-rexton/ssangyong-rexton-1.jpeg";
+import ssangyongRexton_2 from "../../images/ssangyong-rexton/ssangyong-rexton-2.jpeg";
+import ssangyongRexton_3 from "../../images/ssangyong-rexton/ssangyong-rexton-3.jpeg";
+import ssangyongRexton_4 from "../../images/ssangyong-rexton/ssangyong-rexton-4.jpeg";
+import ssangyongRexton_5 from "../../images/ssangyong-rexton/ssangyong-rexton-5.jpeg";
+import ssangyongRexton_6 from "../../images/ssangyong-rexton/ssangyong-rexton-6.jpeg";
+import ssangyongRexton_7 from "../../images/ssangyong-rexton/ssangyong-rexton-7.jpeg";
+import ssangyongRexton_8 from "../../images/ssangyong-rexton/ssangyong-rexton-8.jpeg";
+import ssangyongRexton_9 from "../../images/ssangyong-rexton/ssangyong-rexton-9.jpeg";
+import ssangyongRexton_10 from "../../images/ssangyong-rexton/ssangyong-rexton-10.jpeg";
+
 const cars = [
   {
     description: [
@@ -8,7 +47,7 @@ const cars = [
       { title: "Ціна:", value: "3100 EUR" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: hyundaiH1_3,
     auto: { title: "Авто:", value: "Hyundai H1" },
     toWhom: { title: "Кому:", value: "Теріториальна оборона" },
     whereTo: { title: "Куди:", value: "Запоріжжя" },
@@ -25,7 +64,7 @@ const cars = [
       { title: "Ціна:", value: "4400 EUR" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: hyundaiH14wd_1,
     auto: { title: "Авто:", value: "Hyundai H1 4x4" },
     toWhom: { title: "Кому:", value: "ЗСУ Аєророзвідка" },
     whereTo: { title: "Куди:", value: "—" },
@@ -42,7 +81,7 @@ const cars = [
       { title: "Ціна:", value: "3900 EUR" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: landCruiser_4,
     auto: { title: "Авто:", value: "Land Cruiser" },
     toWhom: { title: "Кому:", value: "Поліція Києва" },
     whereTo: { title: "Куди:", value: "Київ та область" },
@@ -59,7 +98,7 @@ const cars = [
       { title: "Ціна:", value: "4000 EUR" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: landRoverFreelander_7,
     auto: { title: "Авто:", value: "Land Rover Freelander" },
     toWhom: { title: "Кому:", value: "Поліція Києва" },
     whereTo: { title: "Куди:", value: "Київ та область" },
@@ -76,7 +115,7 @@ const cars = [
       { title: "Ціна:", value: "—" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: mercedes_1,
     auto: { title: "Авто:", value: "Mercedes" },
     toWhom: { title: "Кому:", value: "ЗСУ" },
     whereTo: { title: "Куди:", value: "Україна" },
@@ -93,7 +132,7 @@ const cars = [
       { title: "Ціна:", value: "—" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: mitsubishiL200_3,
     auto: { title: "Авто:", value: "Mitsubishi L200 (2 одиниці)" },
     toWhom: { title: "Кому:", value: "КОРД" },
     whereTo: { title: "Куди:", value: "Київ та область" },
@@ -110,7 +149,7 @@ const cars = [
       { title: "Ціна:", value: "3900 EUR" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: pajeroSport_2,
     auto: { title: "Авто:", value: "Pajero Sport" },
     toWhom: { title: "Кому:", value: "ЗСУ" },
     whereTo: { title: "Куди:", value: "Ізюм" },
@@ -127,7 +166,7 @@ const cars = [
       { title: "Ціна:", value: "7300 USD" },
       { title: "Для чого:", value: "—" },
     ],
-    image: "",
+    image: ssangyongRexton_9,
     auto: { title: "Авто:", value: "SsangYong Rexton" },
     toWhom: { title: "Кому:", value: "Поліція Києва" },
     whereTo: { title: "Куди:", value: "Київ та область" },
