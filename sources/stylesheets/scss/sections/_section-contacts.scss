@@ -11,9 +11,10 @@
     justify-content: center;
 
     @include media(">=tablet") {
-      align-items: flex-start;
+      flex-direction: row;
     }
 
+    .logo,
     .contacts {
       align-items: center;
       display: flex;
@@ -27,6 +28,14 @@
         margin-left: auto;
         margin-right: 0;
         width: 50%;
+      }
+    }
+
+    .logo + .contacts {
+      margin-top: 32px;
+
+      @include media(">=tablet") {
+        margin-top: 0;
       }
     }
   }
