@@ -14,8 +14,11 @@ class Index {
   modalWindow;
   modalWindowCryptocurrency;
   modalWindowPayPal;
+  modalWindowThanks;
   swiperModalWindow;
   swiperModalWindowNode;
+  swiperThanks;
+  swiperThanksNode;
   swiperWhomWeHelped;
   swiperWhomWeHelpedNode;
 
@@ -41,9 +44,11 @@ class Index {
     this.initializeScroll();
     this.initializeSwiperWhomWeHelped();
     this.initializeSwiperModalWindow();
+    this.initializeSwiperThanks();
     this.initializeModalWindow();
     this.initializeModalWindowCryptocurrency();
     this.initializeModalWindowPayPal();
+    this.initializeModalWindowThanks();
 
     this.initializeListeners();
   }
@@ -96,6 +101,13 @@ class Index {
     this.modalWindowPayPal = new ModalWindow({
       modalWindowSelector: ".modal-window-paypal",
       modalWindowOpenSelector: ".modal-window-paypal_open",
+    });
+  }
+
+  initializeModalWindowThanks() {
+    this.modalWindowThanks = new ModalWindow({
+      modalWindowSelector: ".modal-window-thanks",
+      modalWindowOpenSelector: ".modal-window-thanks_open",
     });
   }
 
@@ -196,6 +208,25 @@ class Index {
       },
       pagination: {
         el: ".swiper-modal-window .swiper-pagination",
+        type: "bullets",
+      },
+      slidesPerView: 1,
+      spaceBetween: 16
+    });
+  }
+
+  initializeSwiperThanks() {
+    this.swiperThanksNode = document.querySelector(".swiper-thanks");
+
+    this.swiperThanks = new Swiper(this.swiperThanksNode, {
+      loop: true,
+      modules: [Navigation, Pagination],
+      navigation: {
+        nextEl: this.swiperThanksNode.querySelector(".swiper-button-next"),
+        prevEl: this.swiperThanksNode.querySelector(".swiper-button-prev"),
+      },
+      pagination: {
+        el: this.swiperThanksNode.querySelector(".swiper-pagination"),
         type: "bullets",
       },
       slidesPerView: 1,
