@@ -9,8 +9,8 @@ class ModalWindow {
   modalWindowCloseNodes;
   modalWindowOpenNodes;
 
-  constructor({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector } = {}) {
-    this.initialize({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector });
+  constructor({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector, onCloseHandler } = {}) {
+    this.initialize({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector, onCloseHandler });
     this.initializeListeners();
   }
 
@@ -22,11 +22,12 @@ class ModalWindow {
     this.backgroundOverlayNode.remove();
   }
 
-  initialize({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector } = {}) {
+  initialize({ modalWindowSelector, modalWindowCloseSelector, modalWindowOpenSelector, onCloseHandler } = {}) {
     this.bodyNode = document.querySelector("body");
     this.modalWindowNode = document.querySelector(modalWindowSelector || MODAL_WINDOW_SELECTOR);
     this.modalWindowCloseNodes = document.querySelectorAll(modalWindowCloseSelector || MODAL_WINDOW_CLOSE_SELECTOR);
     this.modalWindowOpenNodes = document.querySelectorAll(modalWindowOpenSelector || MODAL_WINDOW_OPEN_SELECTOR);
+    this.onCloseHandler = onCloseHandler;
 
     this.initializeBackgroundOverlay();
   }
@@ -45,23 +46,29 @@ class ModalWindow {
   handleModalWindowClose(event) {
     event.preventDefault();
 
-    this.detachBackgroundOverlay();
     this.close();
   }
 
   handleModalWindowOpen(event) {
     event.preventDefault();
 
-    this.appendBackgroundOverlay();
     this.open();
   }
 
   close() {
+    this.detachBackgroundOverlay();
+
     this.bodyNode.classList.remove("modal-window--active");
     this.modalWindowNode.classList.remove("modal-window--active");
+
+    if (this.onCloseHandler) {
+      this.onCloseHandler();
+    }
   }
 
   open() {
+    this.appendBackgroundOverlay();
+
     this.bodyNode.classList.add("modal-window--active");
     this.modalWindowNode.classList.add("modal-window--active");
   }

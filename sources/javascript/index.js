@@ -11,12 +11,13 @@ const DONATION_TYPES = {
 }
 
 class Index {
-  modalWindow;
   modalWindowCryptocurrency;
   modalWindowPayPal;
   modalWindowThanks;
-  swiperModalWindow;
-  swiperModalWindowNode;
+  modalWindowWhomWeHelped;
+  modalWindowWhomWeHelpedMarkup;
+  swiperModalWindowWhomWeHelped;
+  swiperModalWindowWhomWeHelpedNode;
   swiperThanks;
   swiperThanksNode;
   swiperWhomWeHelped;
@@ -40,15 +41,36 @@ class Index {
     }
   }
 
+  handleModalWindowWhomWeHelpedClose() {
+    this.swiperModalWindowWhomWeHelped.activeIndex = 0;
+  }
+
+  handleWhomWeHelpedItemClick(swiper) {
+    const descriptionMarkup = this.modalWindowWhomWeHelpedMarkup[swiper.clickedIndex].descriptionMarkup;
+    const swiperMarkup = this.modalWindowWhomWeHelpedMarkup[swiper.clickedIndex].swiperMarkup;
+
+    this.modalWindowWhomWeHelped.modalWindowNode.querySelector(".modal-window_footer").innerHTML = "";
+    this.swiperModalWindowWhomWeHelpedNode.querySelector(".swiper-wrapper").innerHTML = "";
+
+    this.modalWindowWhomWeHelped.modalWindowNode.querySelector(".modal-window_footer").append(descriptionMarkup);
+    this.swiperModalWindowWhomWeHelpedNode.querySelector(".swiper-wrapper").append(...swiperMarkup);
+
+    this.modalWindowWhomWeHelped.open();
+    this.swiperModalWindowWhomWeHelped.update();
+    this.swiperModalWindowWhomWeHelped.updateSlides();
+    this.swiperModalWindowWhomWeHelped.updateSlidesClasses();
+  }
+
   initialize() {
     this.initializeScroll();
-    this.initializeSwiperWhomWeHelped();
-    this.initializeSwiperModalWindow();
+    this.initializeSwiperModalWindowWhomWeHelped();
     this.initializeSwiperThanks();
-    this.initializeModalWindow();
+    this.initializeSwiperWhomWeHelped();
+
     this.initializeModalWindowCryptocurrency();
     this.initializeModalWindowPayPal();
     this.initializeModalWindowThanks();
+    this.initializeModalWindowWhomWeHelped();
 
     this.initializeListeners();
   }
@@ -86,8 +108,50 @@ class Index {
     });
   }
 
-  initializeModalWindow() {
-    this.modalWindow = new ModalWindow();
+  initializeModalWindowWhomWeHelped() {
+    this.modalWindowWhomWeHelped = new ModalWindow({
+      modalWindowSelector: ".modal-window-whom-we-helped",
+      modalWindowCloseSelector: ".modal-window-whom-we-helped .modal-window_close",
+      onCloseHandler: this.handleModalWindowWhomWeHelpedClose.bind(this),
+    });
+    this.modalWindowWhomWeHelpedMarkup = getModalWindowWhomWeHelpedMarkup();
+
+    function getModalWindowWhomWeHelpedMarkup() {
+      return cars.map(car => {
+        const swiperSlideNodes = car.images.map(image => {
+          const swiperSlideNode = document.createElement("div");
+          swiperSlideNode.classList.add("swiper-slide");
+
+          const imageNode = document.createElement("div");
+          imageNode.classList.add("graphic-content");
+          imageNode.style.backgroundImage = `url("${image}")`;
+
+          swiperSlideNode.append(imageNode);
+
+          return swiperSlideNode;
+        });
+
+        const ulNode = document.createElement("ul");
+        const liNodes = car.description.map(description => {
+          const liNode = document.createElement("li");
+          const pNode = document.createElement("p");
+          const spanNode = document.createElement("span");
+
+          spanNode.append(description.title);
+          pNode.append(spanNode, description.value);
+          liNode.append(pNode);
+
+          return liNode;
+        });
+
+        ulNode.append(...liNodes);
+
+        return {
+          descriptionMarkup: ulNode,
+          swiperMarkup: swiperSlideNodes
+        };
+      });
+    }
   }
 
   initializeModalWindowCryptocurrency() {
@@ -120,6 +184,25 @@ class Index {
     });
   }
 
+  initializeSwiperModalWindowWhomWeHelped() {
+    this.swiperModalWindowWhomWeHelpedNode = document.querySelector(".swiper-modal-window-whom-we-helped");
+
+    this.swiperModalWindowWhomWeHelped = new Swiper(this.swiperModalWindowWhomWeHelpedNode, {
+      loop: true,
+      modules: [Navigation, Pagination],
+      navigation: {
+        nextEl: this.swiperModalWindowWhomWeHelpedNode.querySelector(".swiper-button-next"),
+        prevEl: this.swiperModalWindowWhomWeHelpedNode.querySelector(".swiper-button-prev"),
+      },
+      pagination: {
+        el: this.swiperModalWindowWhomWeHelpedNode.querySelector(".swiper-pagination"),
+        type: "bullets",
+      },
+      slidesPerView: 1,
+      spaceBetween: 16
+    });
+  }
+
   initializeSwiperWhomWeHelped() {
     this.swiperWhomWeHelpedNode = document.querySelector(".swiper-whom-we-helped");
 
@@ -142,11 +225,14 @@ class Index {
           spaceBetween: 16
         }
       },
-      loop: true,
+      loop: false,
       modules: [Navigation, Pagination],
       navigation: {
         nextEl: ".gallery-whom-we-helped .swiper-button-next",
         prevEl: ".gallery-whom-we-helped .swiper-button-prev",
+      },
+      on: {
+        click: this.handleWhomWeHelpedItemClick.bind(this)
       },
       pagination: {
         el: ".swiper-whom-we-helped .swiper-pagination",
@@ -162,7 +248,7 @@ class Index {
         swiperSlideNode.classList.add("swiper-slide");
 
         const galleryItemNode = document.createElement("div");
-        galleryItemNode.classList.add("gallery_item", "modal-window_open");
+        galleryItemNode.classList.add("gallery_item");
 
         const galleryGraphicContentNode = document.createElement("div");
         galleryGraphicContentNode.classList.add("gallery_graphic-content");
@@ -194,25 +280,6 @@ class Index {
 
       node.append(documentFragment);
     }
-  }
-
-  initializeSwiperModalWindow() {
-    this.swiperModalWindowNode = document.querySelector(".swiper-modal-window");
-
-    this.swiperModalWindow = new Swiper(this.swiperModalWindowNode, {
-      loop: true,
-      modules: [Navigation, Pagination],
-      navigation: {
-        nextEl: ".swiper-modal-window .swiper-button-next",
-        prevEl: ".swiper-modal-window .swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-modal-window .swiper-pagination",
-        type: "bullets",
-      },
-      slidesPerView: 1,
-      spaceBetween: 16
-    });
   }
 
   initializeSwiperThanks() {

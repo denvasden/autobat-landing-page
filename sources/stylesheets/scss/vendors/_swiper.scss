@@ -18,23 +18,6 @@
   background: #929497;
 }
 
-.gallery-modal-window {
-  .swiper-button-prev {
-    left: 16px;
-  }
-
-  .swiper-button-next {
-    right: 16px;
-  }
-
-  .swiper-pagination-fraction,
-  .swiper-pagination-custom,
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 100px;
-  }
-}
-
 .gallery-whom-we-helped {
   .swiper-button-prev,
   .swiper-button-next {
@@ -52,18 +35,32 @@
   }
 }
 
+.swiper-modal-window-whom-we-helped {
+  .swiper-slide {
+    padding: 32px;
+
+    .graphic-content {
+      background-position: center center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
 .swiper-thanks {
-  width: calc(100vw - 48px);
-
-  @include media("landscape") {
-    height: calc(100vh - 152px);
-  }
-
-  @include media(">=tablet") {
-    height: 512px;
-    width: 512px;
-  }
-
   .swiper-slide {
     align-items: center;
     display: flex;
@@ -82,7 +79,7 @@
 
       @include media(">=tablet") {
         height: auto;
-        max-width: 100%;
+        max-width: 64%;
       }
     }
   }
