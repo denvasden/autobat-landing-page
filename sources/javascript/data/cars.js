@@ -23,7 +23,6 @@ import mitsubishiL200_1 from "../../images/mitsubishi-l200/mitsubishi-l200-1.jpe
 import mitsubishiL200_2 from "../../images/mitsubishi-l200/mitsubishi-l200-2.jpeg";
 import mitsubishiL200_3 from "../../images/mitsubishi-l200/mitsubishi-l200-3.jpeg";
 import mitsubishiL200_4 from "../../images/mitsubishi-l200/mitsubishi-l200-4.jpeg";
-import mitsubishiL200_5 from "../../images/mitsubishi-l200/mitsubishi-l200-5.jpeg";
 import pajeroSport_1 from "../../images/pajero-sport/pajero-sport-1.jpeg";
 import pajeroSport_2 from "../../images/pajero-sport/pajero-sport-2.jpeg";
 import ssangyongRexton_1 from "../../images/ssangyong-rexton/ssangyong-rexton-1.jpeg";
@@ -169,7 +168,6 @@ const cars = [
       mitsubishiL200_2,
       mitsubishiL200_3,
       mitsubishiL200_4,
-      mitsubishiL200_5,
     ],
     auto: { title: "Авто:", value: "Mitsubishi L200 (2 одиниці)" },
     toWhom: { title: "Кому:", value: "КОРД" },
