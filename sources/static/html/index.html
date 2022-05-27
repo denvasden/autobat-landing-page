@@ -10,6 +10,8 @@
     <meta content="800" property="og:image:width">
     <meta content="800" property="og:image:height">
 
+    <meta content="telephone=no" name="format-detection" />
+
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
 
     <title>Autobat</title>
 
-    <script src="https://pay.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
+    <!--<script src="https://pay.fondy.eu/static_common/v1/checkout/ipsp.js"></script>-->
   </head>
 
   <body>
@@ -116,7 +118,7 @@
           </h2>
 
           <div class="button-group button-group--donate">
-            <button class="button button--donate button--donate-uah">
+            <button class="button button--donate button--donate-uah modal-window-donate-uah_open">
               <span class="button_title">
                 Гривня
               </span>
@@ -132,7 +134,7 @@
               </span>
             </button>
 
-            <button class="button button--donate button--donate-eur">
+            <button class="button button--donate button--donate-eur modal-window-donate-eur_open">
               <span class="button_title">
                 Євро
               </span>
@@ -153,9 +155,11 @@
             </button>
           </div>
 
-          <button class="button button--donate-monthly">
+          <!--
+          <button class="button button&#45;&#45;donate-monthly">
             Хочу допомагати щомісячно
           </button>
+          -->
         </div>
       </section>
 
@@ -469,7 +473,31 @@
       </div>
     </div>
 
-    <div class="modal-window modal-window-paypal">
+    <div class="modal-window modal-window-donate modal-window-donate-eur">
+      <div class="modal-window_content">
+        <div class="modal-window_header">
+          <img alt="Icon" class="modal-window_close" src="../images/icon-cross.svg">
+        </div>
+
+        <div class="modal-window_main">
+          <div class="donation-details">
+            <div class="donation-details_item">
+              <h4 class="heading heading-4">
+                Номер картки
+              </h4>
+
+              <p class="text-content">
+                5358 3808 8329 8880
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-window_footer"></div>
+      </div>
+    </div>
+
+    <div class="modal-window modal-window-donate modal-window-donate-paypal">
       <div class="modal-window_content">
         <div class="modal-window_header">
           <img alt="Icon" class="modal-window_close" src="../images/icon-cross.svg">
@@ -484,6 +512,30 @@
 
               <p class="text-content">
                 iporohnavets@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-window_footer"></div>
+      </div>
+    </div>
+
+    <div class="modal-window modal-window-donate modal-window-donate-uah">
+      <div class="modal-window_content">
+        <div class="modal-window_header">
+          <img alt="Icon" class="modal-window_close" src="../images/icon-cross.svg">
+        </div>
+
+        <div class="modal-window_main">
+          <div class="donation-details">
+            <div class="donation-details_item">
+              <h4 class="heading heading-4">
+                Номер картки
+              </h4>
+
+              <p class="text-content">
+                5358 3808 8329 8880
               </p>
             </div>
           </div>

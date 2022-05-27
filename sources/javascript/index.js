@@ -30,10 +30,12 @@ class Index {
   handleDonateButtonClick({ currency = "UAH", donationType = DONATION_TYPES.FONDY } = {}) {
     switch (donationType) {
       case DONATION_TYPES.FONDY:
-      case DONATION_TYPES.FONDY_MONTHLY:
-        const monthly = donationType === DONATION_TYPES.FONDY_MONTHLY;
+        break;
 
-        window.open(this.initializeFondy(currency, monthly), "_blank");
+      case DONATION_TYPES.FONDY_MONTHLY:
+        // const monthly = donationType === DONATION_TYPES.FONDY_MONTHLY;
+        //
+        // window.open(this.initializeFondy(currency, monthly), "_blank");
         break;
 
       default:
@@ -68,8 +70,10 @@ class Index {
     this.initializeSwiperWhomWeHelped();
 
     this.initializeModalWindowCryptocurrency();
+    this.initializeModalWindowDonateEur();
     this.initializeModalWindowPayPal();
     this.initializeModalWindowThanks();
+    this.initializeModalWindowDonateUah();
     this.initializeModalWindowWhomWeHelped();
 
     this.initializeListeners();
@@ -94,18 +98,18 @@ class Index {
   }
 
   initializeListeners() {
-    document.querySelector(".button--donate-eur").addEventListener("click", (event) => {
-      event.preventDefault();
-      this.handleDonateButtonClick({ currency: "eur", donationType: DONATION_TYPES.FONDY });
-    });
-    document.querySelector(".button--donate-monthly").addEventListener("click", (event) => {
-      event.preventDefault();
-      this.handleDonateButtonClick({ currency: "uah", donationType: DONATION_TYPES.FONDY_MONTHLY });
-    });
-    document.querySelector(".button--donate-uah").addEventListener("click", (event) => {
-      event.preventDefault();
-      this.handleDonateButtonClick({ currency: "uah", donationType: DONATION_TYPES.FONDY });
-    });
+    // document.querySelector(".button--donate-eur").addEventListener("click", (event) => {
+    //   event.preventDefault();
+    //   this.handleDonateButtonClick({ currency: "eur", donationType: DONATION_TYPES.FONDY });
+    // });
+    // document.querySelector(".button--donate-monthly").addEventListener("click", (event) => {
+    //   event.preventDefault();
+    //   this.handleDonateButtonClick({ currency: "uah", donationType: DONATION_TYPES.FONDY_MONTHLY });
+    // });
+    // document.querySelector(".button--donate-uah").addEventListener("click", (event) => {
+    //   event.preventDefault();
+    //   this.handleDonateButtonClick({ currency: "uah", donationType: DONATION_TYPES.FONDY });
+    // });
   }
 
   initializeModalWindowWhomWeHelped() {
@@ -161,9 +165,16 @@ class Index {
     });
   }
 
+  initializeModalWindowDonateEur() {
+    this.modalWindowPayPal = new ModalWindow({
+      modalWindowSelector: ".modal-window-donate-eur",
+      modalWindowOpenSelector: ".modal-window-donate-eur_open",
+    });
+  }
+
   initializeModalWindowPayPal() {
     this.modalWindowPayPal = new ModalWindow({
-      modalWindowSelector: ".modal-window-paypal",
+      modalWindowSelector: ".modal-window-donate-paypal",
       modalWindowOpenSelector: ".modal-window-paypal_open",
     });
   }
@@ -172,6 +183,13 @@ class Index {
     this.modalWindowThanks = new ModalWindow({
       modalWindowSelector: ".modal-window-thanks",
       modalWindowOpenSelector: ".modal-window-thanks_open",
+    });
+  }
+
+  initializeModalWindowDonateUah() {
+    this.modalWindowPayPal = new ModalWindow({
+      modalWindowSelector: ".modal-window-donate-uah",
+      modalWindowOpenSelector: ".modal-window-donate-uah_open",
     });
   }
 

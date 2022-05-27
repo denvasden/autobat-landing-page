@@ -10,10 +10,10 @@
 
     .text-content {
       font-size: 12px;
-      white-space: nowrap;
 
       @include media(">=tablet") {
         font-size: 16px;
+        white-space: nowrap;
       }
     }
 

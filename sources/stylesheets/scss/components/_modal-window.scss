@@ -94,6 +94,12 @@ body.modal-window--active {
   z-index: 1000;
 }
 
+.modal-window-donate {
+  .modal-window_content {
+    min-width: 256px;
+  }
+}
+
 .modal-window-whom-we-helped {
   .modal-window_content {
     height: calc(100vh - 16px);
