@@ -67,7 +67,7 @@ const cars = [
   {
     description: [
       { title: "Авто:", value: "Hyundai H1 4x4" },
-      { title: "Кому:", value: "ЗСУ Аєророзвідка" },
+      { title: "Кому:", value: "ЗСУ (Аєророзвідка)" },
       { title: "Куди:", value: "—" },
       { title: "Звідки:", value: "Литва" },
       { title: "Ціна:", value: "4400 EUR" },
@@ -78,7 +78,7 @@ const cars = [
       hyundaiH14wd_1,
     ],
     auto: { title: "Авто:", value: "Hyundai H1 4x4" },
-    toWhom: { title: "Кому:", value: "ЗСУ Аєророзвідка" },
+    toWhom: { title: "Кому:", value: "ЗСУ (Аєророзвідка)" },
     whereTo: { title: "Куди:", value: "—" },
     whereFrom: { title: "Звідки:", value: "Литва" },
     price: { title: "Ціна:", value: "4400 EUR" },
@@ -181,13 +181,13 @@ const cars = [
   {
     description: [
       { title: "Авто:", value: "Pajero Sport" },
-      { title: "Кому:", value: "ЗСУ" },
+      { title: "Кому:", value: "ЗСУ (А1736)" },
       { title: "Куди:", value: "Ізюм" },
       { title: "Звідки:", value: "Литва" },
       { title: "Ціна:", value: "3900 EUR" },
       { title: "Для чого:", value: "—" },
     ],
-    image: pajeroSport_2,
+    image: pajeroSport_4,
     images: [
       pajeroSport_1,
       pajeroSport_2,
