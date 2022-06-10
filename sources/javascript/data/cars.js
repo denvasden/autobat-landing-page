@@ -18,6 +18,19 @@ import landRoverFreelander_5 from "../../images/land-rover-freelander/land-rover
 import landRoverFreelander_6 from "../../images/land-rover-freelander/land-rover-freelander-6.jpeg";
 import landRoverFreelander_7 from "../../images/land-rover-freelander/land-rover-freelander-7.jpeg";
 import landRoverFreelander_8 from "../../images/land-rover-freelander/land-rover-freelander-8.jpeg";
+import landRoverFreelander_9 from "../../images/land-rover-freelander/land-rover-freelander-9.jpeg";
+import landRoverFreelander_10 from "../../images/land-rover-freelander/land-rover-freelander-10.jpeg";
+import landRoverFreelander_11 from "../../images/land-rover-freelander/land-rover-freelander-11.jpeg";
+import landRoverFreelander_12 from "../../images/land-rover-freelander/land-rover-freelander-12.jpeg";
+import landRoverFreelander_13 from "../../images/land-rover-freelander/land-rover-freelander-13.jpeg";
+import landRoverFreelander_14 from "../../images/land-rover-freelander/land-rover-freelander-14.jpeg";
+import landRoverFreelander_15 from "../../images/land-rover-freelander/land-rover-freelander-15.jpeg";
+import landRoverFreelander_16 from "../../images/land-rover-freelander/land-rover-freelander-16.jpeg";
+import landRoverFreelander_17 from "../../images/land-rover-freelander/land-rover-freelander-17.jpeg";
+import landRoverFreelander_18 from "../../images/land-rover-freelander/land-rover-freelander-18.jpeg";
+import landRoverFreelander_19 from "../../images/land-rover-freelander/land-rover-freelander-19.jpeg";
+import landRoverFreelander_20 from "../../images/land-rover-freelander/land-rover-freelander-20.jpeg";
+import landRoverFreelander_21 from "../../images/land-rover-freelander/land-rover-freelander-21.jpeg";
 import mercedes_1 from "../../images/mercedes/mercedes-1.png";
 import mitsubishiL200_1 from "../../images/mitsubishi-l200/mitsubishi-l200-1.jpeg";
 import mitsubishiL200_2 from "../../images/mitsubishi-l200/mitsubishi-l200-2.jpeg";
@@ -111,8 +124,8 @@ const cars = [
   {
     description: [
       { title: "Авто:", value: "Land Rover Freelander" },
-      { title: "Кому:", value: "Поліція Києва" },
-      { title: "Куди:", value: "Київ та область" },
+      { title: "Кому:", value: "ЗСУ (А4440)" },
+      { title: "Куди:", value: "Миколаїв" },
       { title: "Звідки:", value: "Україна" },
       { title: "Ціна:", value: "4000 EUR" },
       { title: "Для чого:", value: "—" },
@@ -127,10 +140,23 @@ const cars = [
       landRoverFreelander_6,
       landRoverFreelander_7,
       landRoverFreelander_8,
+      landRoverFreelander_9,
+      landRoverFreelander_10,
+      landRoverFreelander_11,
+      landRoverFreelander_12,
+      landRoverFreelander_13,
+      landRoverFreelander_14,
+      landRoverFreelander_15,
+      landRoverFreelander_16,
+      landRoverFreelander_17,
+      landRoverFreelander_18,
+      landRoverFreelander_19,
+      landRoverFreelander_20,
+      landRoverFreelander_21,
     ],
     auto: { title: "Авто:", value: "Land Rover Freelander" },
-    toWhom: { title: "Кому:", value: "Поліція Києва" },
-    whereTo: { title: "Куди:", value: "Київ та область" },
+    toWhom: { title: "Кому:", value: "ЗСУ (А4440)" },
+    whereTo: { title: "Куди:", value: "Миколаїв" },
     whereFrom: { title: "Звідки:", value: "Україна" },
     price: { title: "Ціна:", value: "4000 EUR" },
     forWhat: { title: "Для чого:", value: "—" },
