@@ -25,6 +25,8 @@ import mitsubishiL200_3 from "../../images/mitsubishi-l200/mitsubishi-l200-3.jpe
 import mitsubishiL200_4 from "../../images/mitsubishi-l200/mitsubishi-l200-4.jpeg";
 import pajeroSport_1 from "../../images/pajero-sport/pajero-sport-1.jpeg";
 import pajeroSport_2 from "../../images/pajero-sport/pajero-sport-2.jpeg";
+import pajeroSport_3 from "../../images/pajero-sport/pajero-sport-3.jpeg";
+import pajeroSport_4 from "../../images/pajero-sport/pajero-sport-4.jpeg";
 import ssangyongRexton_1 from "../../images/ssangyong-rexton/ssangyong-rexton-1.jpeg";
 import ssangyongRexton_2 from "../../images/ssangyong-rexton/ssangyong-rexton-2.jpeg";
 import ssangyongRexton_3 from "../../images/ssangyong-rexton/ssangyong-rexton-3.jpeg";
@@ -189,9 +191,11 @@ const cars = [
     images: [
       pajeroSport_1,
       pajeroSport_2,
+      pajeroSport_3,
+      pajeroSport_4,
     ],
     auto: { title: "Авто:", value: "Pajero Sport" },
-    toWhom: { title: "Кому:", value: "ЗСУ" },
+    toWhom: { title: "Кому:", value: "ЗСУ (А1736)" },
     whereTo: { title: "Куди:", value: "Ізюм" },
     whereFrom: { title: "Звідки:", value: "Литва" },
     price: { title: "Ціна:", value: "3900 EUR" },
