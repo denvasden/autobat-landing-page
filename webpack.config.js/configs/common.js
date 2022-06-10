@@ -54,6 +54,9 @@ module.exports = (env) => {
       filename: "javascript/[name].js",
       path: output,
     },
+    performance: {
+      maxAssetSize: 512000
+    },
     plugins: [
       copyWebpackPlugin,
       ...htmlWebpackPlugins,
