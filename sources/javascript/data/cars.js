@@ -386,7 +386,6 @@ const cars = [
     price: { title: "Ціна:", value: "7300 USD" },
     forWhat: { title: "Для чого:", value: "—" },
   },
-
   {
     description: [
       { title: "Авто:", value: "Volkswagen T5" },
@@ -412,7 +411,6 @@ const cars = [
     price: { title: "Ціна:", value: "4500 EUR" },
     forWhat: { title: "Для чого:", value: "-" },
   },
-
   {
     description: [
       { title: "Авто:", value: "Volkswagen T5" },
@@ -435,7 +433,6 @@ const cars = [
     price: { title: "Ціна:", value: "4500 EUR" },
     forWhat: { title: "Для чого:", value: "-" },
   },
-
   {
     description: [
       { title: "Авто:", value: "Volkswagen T5" },
@@ -457,7 +454,6 @@ const cars = [
     price: { title: "Ціна:", value: "4500 EUR" },
     forWhat: { title: "Для чого:", value: "-" },
   },
-
   {
     description: [
       { title: "Авто:", value: "Volkswagen T5" },
