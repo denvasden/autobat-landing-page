@@ -37,7 +37,7 @@ module.exports = (env) => {
     mode: "none",
     module: {
       rules: [
-        eslint(env),
+        // eslint(env),
         {
           oneOf: [
             css(env),
@@ -55,7 +55,9 @@ module.exports = (env) => {
       path: output,
     },
     performance: {
-      maxAssetSize: 512000
+      hints: false
+      // maxAssetSize: 512000,
+      // maxEntrypointSize: 512
     },
     plugins: [
       copyWebpackPlugin,

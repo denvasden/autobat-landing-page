@@ -54,7 +54,64 @@ import ssangyongRexton_8 from "../../images/ssangyong-rexton/ssangyong-rexton-8.
 import ssangyongRexton_9 from "../../images/ssangyong-rexton/ssangyong-rexton-9.jpeg";
 import ssangyongRexton_10 from "../../images/ssangyong-rexton/ssangyong-rexton-10.jpeg";
 
+import citroenJumper_1 from "../../images/citroen-jumper/citroen-jumper-1.png";
+import citroenJumper_2 from "../../images/citroen-jumper/citroen-jumper-2.png";
+import citroenJumper_3 from "../../images/citroen-jumper/citroen-jumper-3.png";
+import citroenJumper_4 from "../../images/citroen-jumper/citroen-jumper-4.png";
+
+import hyundaiH1V2_1 from "../../images/hyundai-h1-v2/hyundai-h1-v2-1.jpeg";
+import hyundaiH1V2_2 from "../../images/hyundai-h1-v2/hyundai-h1-v2-2.jpeg";
+import hyundaiH1V2_3 from "../../images/hyundai-h1-v2/hyundai-h1-v2-3.jpeg";
+import hyundaiH1V2_4 from "../../images/hyundai-h1-v2/hyundai-h1-v2-4.jpeg";
+
+import hyundaiTerracan_1 from "../../images/hyundai-terracan/hyundai-terracan-1.jpeg";
+
+import jeepCommander_1 from "../../images/jeep-commander/jeep-commander-1.jpeg";
+import jeepCommander_2 from "../../images/jeep-commander/jeep-commander-2.jpeg";
+import jeepCommander_3 from "../../images/jeep-commander/jeep-commander-3.jpeg";
+import jeepCommander_4 from "../../images/jeep-commander/jeep-commander-4.jpeg";
+import jeepCommander_5 from "../../images/jeep-commander/jeep-commander-5.jpeg";
+
+import volkswagenT5V1_1 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-1.jpeg";
+import volkswagenT5V1_2 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-2.jpeg";
+import volkswagenT5V1_3 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-3.jpeg";
+import volkswagenT5V1_4 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-4.jpeg";
+import volkswagenT5V1_5 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-5.jpeg";
+import volkswagenT5V1_6 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-6.jpeg";
+
+import volkswagenT5V2_1 from "../../images/volkswagen-t5-v2/volkswagen-t5-v2-1.jpeg";
+import volkswagenT5V2_2 from "../../images/volkswagen-t5-v2/volkswagen-t5-v2-2.jpeg";
+import volkswagenT5V2_3 from "../../images/volkswagen-t5-v2/volkswagen-t5-v2-3.jpeg";
+
+import volkswagenT5V3_1 from "../../images/volkswagen-t5-v3/volkswagen-t5-v3-1.jpeg";
+import volkswagenT5V3_2 from "../../images/volkswagen-t5-v3/volkswagen-t5-v3-2.jpeg";
+
+import volkswagenT5V4_1 from "../../images/volkswagen-t5-v4/volkswagen-t5-v4-1.jpeg";
+
 const cars = [
+  {
+    description: [
+      { title: "Авто:", value: "Citroën Jumper" },
+      { title: "Кому:", value: "14-та окрема механізована бригада" },
+      { title: "Куди:", value: "Павлоград" },
+      { title: "Звідки:", value: "Литва" },
+      { title: "Ціна:", value: "5300 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: citroenJumper_4,
+    images: [
+      citroenJumper_1,
+      citroenJumper_2,
+      citroenJumper_3,
+      citroenJumper_4,
+    ],
+    auto: { title: "Авто:", value: "Citroën Jumper" },
+    toWhom: { title: "Кому:", value: "14-та окрема механізована бригада" },
+    whereTo: { title: "Куди:", value: "Павлоград" },
+    whereFrom: { title: "Звідки:", value: "Литва" },
+    price: { title: "Ціна:", value: "5300 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
+  },
   {
     description: [
       { title: "Авто:", value: "Hyundai H1" },
@@ -82,6 +139,29 @@ const cars = [
   },
   {
     description: [
+      { title: "Авто:", value: "Hyundai H1" },
+      { title: "Кому:", value: "ЗСУ (А4123)" },
+      { title: "Куди:", value: "-" },
+      { title: "Звідки:", value: "Литва" },
+      { title: "Ціна:", value: "5500 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: hyundaiH1V2_1,
+    images: [
+      hyundaiH1V2_1,
+      hyundaiH1V2_2,
+      hyundaiH1V2_3,
+      hyundaiH1V2_4,
+    ],
+    auto: { title: "Авто:", value: "Hyundai H1" },
+    toWhom: { title: "Кому:", value: "ЗСУ (А4123)" },
+    whereTo: { title: "Куди:", value: "-" },
+    whereFrom: { title: "Звідки:", value: "Литва" },
+    price: { title: "Ціна:", value: "5500 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
+  },
+  {
+    description: [
       { title: "Авто:", value: "Hyundai H1 4x4" },
       { title: "Кому:", value: "ЗСУ (Аєророзвідка)" },
       { title: "Куди:", value: "—" },
@@ -99,6 +179,50 @@ const cars = [
     whereFrom: { title: "Звідки:", value: "Литва" },
     price: { title: "Ціна:", value: "4400 EUR" },
     forWhat: { title: "Для чого:", value: "—" },
+  },
+  {
+    description: [
+      { title: "Авто:", value: "Hyundai Terracan" },
+      { title: "Кому:", value: "ЗСУ (А1815)" },
+      { title: "Куди:", value: "-" },
+      { title: "Звідки:", value: "Литва" },
+      { title: "Ціна:", value: "-" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: hyundaiTerracan_1,
+    images: [
+      hyundaiTerracan_1,
+    ],
+    auto: { title: "Авто:", value: "Hyundai Terracan" },
+    toWhom: { title: "Кому:", value: "ЗСУ (А1815)" },
+    whereTo: { title: "Куди:", value: "-" },
+    whereFrom: { title: "Звідки:", value: "Литва" },
+    price: { title: "Ціна:", value: "-" },
+    forWhat: { title: "Для чого:", value: "-" },
+  },
+  {
+    description: [
+      { title: "Авто:", value: "Jeep Commander" },
+      { title: "Кому:", value: "ЗСУ (А0336-III)" },
+      { title: "Куди:", value: "Харків" },
+      { title: "Звідки:", value: "Литва" },
+      { title: "Ціна:", value: "11000 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: jeepCommander_1,
+    images: [
+      jeepCommander_1,
+      jeepCommander_2,
+      jeepCommander_3,
+      jeepCommander_4,
+      jeepCommander_5,
+    ],
+    auto: { title: "Авто:", value: "Jeep Commander" },
+    toWhom: { title: "Кому:", value: "ЗСУ (А0336-III)" },
+    whereTo: { title: "Куди:", value: "Харків" },
+    whereFrom: { title: "Звідки:", value: "Литва" },
+    price: { title: "Ціна:", value: "11000 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
   },
   {
     description: [
@@ -170,7 +294,7 @@ const cars = [
       { title: "Кому:", value: "ЗСУ" },
       { title: "Куди:", value: "Україна" },
       { title: "Звідки:", value: "Нідерланди" },
-      { title: "Ціна:", value: "—" },
+      { title: "Ціна:", value: "10000 USD" },
       { title: "Для чого:", value: "—" },
     ],
     image: mercedes_1,
@@ -181,7 +305,7 @@ const cars = [
     toWhom: { title: "Кому:", value: "ЗСУ" },
     whereTo: { title: "Куди:", value: "Україна" },
     whereFrom: { title: "Звідки:", value: "Нідерланди" },
-    price: { title: "Ціна:", value: "—" },
+    price: { title: "Ціна:", value: "10000 USD" },
     forWhat: { title: "Для чого:", value: "—" },
   },
   {
@@ -261,6 +385,98 @@ const cars = [
     whereFrom: { title: "Звідки:", value: "Україна" },
     price: { title: "Ціна:", value: "7300 USD" },
     forWhat: { title: "Для чого:", value: "—" },
+  },
+
+  {
+    description: [
+      { title: "Авто:", value: "Volkswagen T5" },
+      { title: "Кому:", value: "ССО" },
+      { title: "Куди:", value: "Павлоград" },
+      { title: "Звідки:", value: "Німеччина" },
+      { title: "Ціна:", value: "4500 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: volkswagenT5V1_1,
+    images: [
+      volkswagenT5V1_1,
+      volkswagenT5V1_2,
+      volkswagenT5V1_3,
+      volkswagenT5V1_4,
+      volkswagenT5V1_5,
+      volkswagenT5V1_6,
+    ],
+    auto: { title: "Авто:", value: "Volkswagen T5" },
+    toWhom: { title: "Кому:", value: "ССО" },
+    whereTo: { title: "Куди:", value: "Павлоград" },
+    whereFrom: { title: "Звідки:", value: "Німеччина" },
+    price: { title: "Ціна:", value: "4500 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
+  },
+
+  {
+    description: [
+      { title: "Авто:", value: "Volkswagen T5" },
+      { title: "Кому:", value: "Прикордонники" },
+      { title: "Куди:", value: "Харків" },
+      { title: "Звідки:", value: "Німеччина" },
+      { title: "Ціна:", value: "4500 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: volkswagenT5V2_3,
+    images: [
+      volkswagenT5V2_1,
+      volkswagenT5V2_2,
+      volkswagenT5V2_3,
+    ],
+    auto: { title: "Авто:", value: "Volkswagen T5" },
+    toWhom: { title: "Кому:", value: "Прикордонники" },
+    whereTo: { title: "Куди:", value: "Харків" },
+    whereFrom: { title: "Звідки:", value: "Німеччина" },
+    price: { title: "Ціна:", value: "4500 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
+  },
+
+  {
+    description: [
+      { title: "Авто:", value: "Volkswagen T5" },
+      { title: "Кому:", value: "ЗСУ (1008)" },
+      { title: "Куди:", value: "Ізюм" },
+      { title: "Звідки:", value: "Німеччина" },
+      { title: "Ціна:", value: "4500 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: volkswagenT5V3_1,
+    images: [
+      volkswagenT5V3_1,
+      volkswagenT5V3_2,
+    ],
+    auto: { title: "Авто:", value: "Volkswagen T5" },
+    toWhom: { title: "Кому:", value: "ЗСУ (1008)" },
+    whereTo: { title: "Куди:", value: "Ізюм" },
+    whereFrom: { title: "Звідки:", value: "Німеччина" },
+    price: { title: "Ціна:", value: "4500 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
+  },
+
+  {
+    description: [
+      { title: "Авто:", value: "Volkswagen T5" },
+      { title: "Кому:", value: "Батальйон ім. С. Кульчицького" },
+      { title: "Куди:", value: "Ізюм" },
+      { title: "Звідки:", value: "Німеччина" },
+      { title: "Ціна:", value: "4500 EUR" },
+      { title: "Для чого:", value: "—" },
+    ],
+    image: volkswagenT5V4_1,
+    images: [
+      volkswagenT5V4_1,
+    ],
+    auto: { title: "Авто:", value: "Volkswagen T5" },
+    toWhom: { title: "Кому:", value: "Батальйон ім. С. Кульчицького" },
+    whereTo: { title: "Куди:", value: "Ізюм" },
+    whereFrom: { title: "Звідки:", value: "Німеччина" },
+    price: { title: "Ціна:", value: "4500 EUR" },
+    forWhat: { title: "Для чого:", value: "-" },
   },
 ];
 
