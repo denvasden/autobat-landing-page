@@ -81,6 +81,9 @@ import ssangyongRexton_8 from "../../images/ssangyong-rexton/ssangyong-rexton-8.
 import ssangyongRexton_9 from "../../images/ssangyong-rexton/ssangyong-rexton-9.jpeg";
 import toyotaHilux_1 from "../../images/toyota-hilux/toyota-hilux-1.jpeg";
 import toyotaHilux_2 from "../../images/toyota-hilux/toyota-hilux-2.jpeg";
+import toyotaHiluxV2_1 from "../../images/toyota-hilux-v2/toyota-hilux-v2-1.jpeg"
+import toyotaHiluxV2_2 from "../../images/toyota-hilux-v2/toyota-hilux-v2-2.jpeg"
+import toyotaHiluxV2_3 from "../../images/toyota-hilux-v2/toyota-hilux-v2-3.jpeg"
 import volkswagenT5V1_1 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-1.jpeg";
 import volkswagenT5V1_2 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-2.jpeg";
 import volkswagenT5V1_3 from "../../images/volkswagen-t5-v1/volkswagen-t5-v1-3.jpeg";
@@ -496,6 +499,26 @@ const cars = [
   },
   {
     description: [
+      { title: "Авто:", value: "Toyota Hilux (2013)" },
+      { title: "Кому:", value: "ЗСУ (Сенцов)" },
+      { title: "Куди:", value: "Слов'янськ" },
+      { title: "Звідки:", value: "Литва" },
+      { title: "Ціна:", value: "14000 EUR" }
+    ],
+    image: toyotaHiluxV2_1,
+    images: [
+      toyotaHiluxV2_1,
+      toyotaHiluxV2_2,
+      toyotaHiluxV2_3,
+    ],
+    auto: { title: "Авто:", value: "Toyota Hilux (2013)" },
+    toWhom: { title: "Кому:", value: "ЗСУ (Сенцов)" },
+    whereTo: { title: "Куди:", value: "Слов'янськ" },
+    whereFrom: { title: "Звідки:", value: "Литва" },
+    price: { title: "Ціна:", value: "14000 EUR" },
+  },
+  {
+    description: [
       { title: "Авто:", value: "Volkswagen T5" },
       { title: "Кому:", value: "ССО" },
       { title: "Куди:", value: "Павлоград" },
@@ -595,7 +618,6 @@ const cars = [
     whereFrom: { title: "Звідки:", value: "Німеччина" },
     price: { title: "Ціна:", value: "5500 EUR" },
   },
-
   {
     description: [
       { title: "Авто:", value: "Volkswagen T5" },
@@ -615,7 +637,6 @@ const cars = [
     whereFrom: { title: "Звідки:", value: "Німеччина" },
     price: { title: "Ціна:", value: "5500 EUR" },
   },
-
   {
     description: [
       { title: "Авто:", value: "Volkswagen Touareg" },
