@@ -60,6 +60,11 @@ import mitsubishiL200V2_1 from "../../images/mitsubishi-l200-v2/mitsubishi-l200-
 import mitsubishiL200V2_2 from "../../images/mitsubishi-l200-v2/mitsubishi-l200-v2-2.jpeg"
 import nissanPickupNavara_1 from "../../images/nissan-pickup-navara/nissan-pickup-navara-1.jpeg";
 import nissanPickupNavara_2 from "../../images/nissan-pickup-navara/nissan-pickup-navara-2.jpeg";
+import nissanTerrano_1 from "../../images/nissan-terrano/nissan-terrano-1.jpeg";
+import nissanTerrano_2 from "../../images/nissan-terrano/nissan-terrano-2.jpeg";
+import nissanTerrano_3 from "../../images/nissan-terrano/nissan-terrano-3.jpeg";
+import nissanTerrano_4 from "../../images/nissan-terrano/nissan-terrano-4.jpeg";
+import nissanTerrano_5 from "../../images/nissan-terrano/nissan-terrano-5.jpeg";
 import pajeroSport_1 from "../../images/pajero-sport/pajero-sport-1.jpeg";
 import pajeroSport_2 from "../../images/pajero-sport/pajero-sport-2.jpeg";
 import pajeroSport_3 from "../../images/pajero-sport/pajero-sport-3.jpeg";
@@ -94,6 +99,10 @@ import volkswagenT5V5_3 from "../../images/volkswagen-t5-v5/volkswagen-t5-v5-3.j
 import volkswagenT5V5_4 from "../../images/volkswagen-t5-v5/volkswagen-t5-v5-4.jpeg";
 import volkswagenT5V6_1 from "../../images/volkswagen-t5-v6/volkswagen-t5-v6-1.jpeg";
 import volkswagenT5V6_2 from "../../images/volkswagen-t5-v6/volkswagen-t5-v6-2.jpeg";
+
+import volkswagenTouareg_1 from "../../images/volkswagen-touareg/volkswagen-touareg-1.jpeg";
+import volkswagenTouareg_2 from "../../images/volkswagen-touareg/volkswagen-touareg-2.jpeg";
+import volkswagenTouareg_3 from "../../images/volkswagen-touareg/volkswagen-touareg-3.jpeg";
 
 const cars = [
   {
@@ -387,10 +396,13 @@ const cars = [
       { title: "Звідки:", value: "Угорщина" },
       { title: "Ціна:", value: "5500 EUR" }
     ],
-    image: nissanPickupNavara_2,
+    image: nissanTerrano_2,
     images: [
-      nissanPickupNavara_1,
-      nissanPickupNavara_2,
+      nissanTerrano_1,
+      nissanTerrano_2,
+      nissanTerrano_3,
+      nissanTerrano_4,
+      nissanTerrano_5,
     ],
     auto: { title: "Авто:", value: "Nissan Terrano" },
     toWhom: { title: "Кому:", value: "ЗСУ (А7295)" },
@@ -583,6 +595,7 @@ const cars = [
     whereFrom: { title: "Звідки:", value: "Німеччина" },
     price: { title: "Ціна:", value: "5500 EUR" },
   },
+
   {
     description: [
       { title: "Авто:", value: "Volkswagen T5" },
@@ -601,6 +614,27 @@ const cars = [
     whereTo: { title: "Куди:", value: "Запоріжжя" },
     whereFrom: { title: "Звідки:", value: "Німеччина" },
     price: { title: "Ціна:", value: "5500 EUR" },
+  },
+
+  {
+    description: [
+      { title: "Авто:", value: "Volkswagen Touareg" },
+      { title: "Кому:", value: "НГУ" },
+      { title: "Куди:", value: "Слов'янськ" },
+      { title: "Звідки:", value: "Литва" },
+      { title: "Ціна:", value: "5400 EUR" }
+    ],
+    image: volkswagenTouareg_1,
+    images: [
+      volkswagenTouareg_1,
+      volkswagenTouareg_2,
+      volkswagenTouareg_3,
+    ],
+    auto: { title: "Авто:", value: "Volkswagen Touareg" },
+    toWhom: { title: "Кому:", value: "НГУ" },
+    whereTo: { title: "Куди:", value: "Слов'янськ" },
+    whereFrom: { title: "Звідки:", value: "Литва" },
+    price: { title: "Ціна:", value: "5400 EUR" },
   },
 ];
 
