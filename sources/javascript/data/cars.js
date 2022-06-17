@@ -2,6 +2,12 @@ import citroenJumper_1 from "../../images/citroen-jumper/citroen-jumper-1.png";
 import citroenJumper_2 from "../../images/citroen-jumper/citroen-jumper-2.png";
 import citroenJumper_3 from "../../images/citroen-jumper/citroen-jumper-3.png";
 import citroenJumper_4 from "../../images/citroen-jumper/citroen-jumper-4.jpeg";
+import fordF350_1 from "../../images/ford-f350/ford-f350-1.jpeg";
+import fordF350_2 from "../../images/ford-f350/ford-f350-2.jpeg";
+import fordF350_3 from "../../images/ford-f350/ford-f350-3.jpeg";
+import fordF350_4 from "../../images/ford-f350/ford-f350-4.jpeg";
+import fordF350_5 from "../../images/ford-f350/ford-f350-5.jpeg";
+import fordF350_6 from "../../images/ford-f350/ford-f350-6.jpeg";
 import hyundaiH1_1 from "../../images/hyundai-h1/hyundai-h1-1.jpg";
 import hyundaiH1_2 from "../../images/hyundai-h1/hyundai-h1-2.jpeg";
 import hyundaiH1_3 from "../../images/hyundai-h1/hyundai-h1-3.jpeg";
@@ -128,6 +134,29 @@ const cars = [
     whereTo: { title: "Куди:", value: "Павлоград" },
     whereFrom: { title: "Звідки:", value: "Литва" },
     price: { title: "Ціна:", value: "5300 EUR" },
+  },
+  {
+    description: [
+      { title: "Авто:", value: "Ford F350" },
+      { title: "Кому:", value: "ВМС" },
+      { title: "Куди:", value: "Південь" },
+      { title: "Звідки:", value: "Україна" },
+      { title: "Ціна:", value: "13500 EUR" }
+    ],
+    image: fordF350_2,
+    images: [
+      fordF350_1,
+      fordF350_2,
+      fordF350_3,
+      fordF350_4,
+      fordF350_5,
+      fordF350_6,
+    ],
+    auto: { title: "Авто:", value: "Ford F350" },
+    toWhom: { title: "Кому:", value: "ВМС" },
+    whereTo: { title: "Куди:", value: "Південь" },
+    whereFrom: { title: "Звідки:", value: "Україна" },
+    price: { title: "Ціна:", value: "13500 EUR" },
   },
   {
     description: [
