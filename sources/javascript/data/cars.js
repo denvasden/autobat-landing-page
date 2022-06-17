@@ -108,7 +108,10 @@ import volkswagenT5V5_3 from "../../images/volkswagen-t5-v5/volkswagen-t5-v5-3.j
 import volkswagenT5V5_4 from "../../images/volkswagen-t5-v5/volkswagen-t5-v5-4.jpeg";
 import volkswagenT5V6_1 from "../../images/volkswagen-t5-v6/volkswagen-t5-v6-1.jpeg";
 import volkswagenT5V6_2 from "../../images/volkswagen-t5-v6/volkswagen-t5-v6-2.jpeg";
-
+import volkswagenT5V7_1 from "../../images/volkswagen-t5-v7/volkswagen-t5-v7-1.jpeg";
+import volkswagenT5V7_2 from "../../images/volkswagen-t5-v7/volkswagen-t5-v7-2.jpeg";
+import volkswagenT5V7_3 from "../../images/volkswagen-t5-v7/volkswagen-t5-v7-3.jpeg";
+import volkswagenT5V7_4 from "../../images/volkswagen-t5-v7/volkswagen-t5-v7-4.jpeg";
 import volkswagenTouareg_1 from "../../images/volkswagen-touareg/volkswagen-touareg-1.jpeg";
 import volkswagenTouareg_2 from "../../images/volkswagen-touareg/volkswagen-touareg-2.jpeg";
 import volkswagenTouareg_3 from "../../images/volkswagen-touareg/volkswagen-touareg-3.jpeg";
@@ -663,6 +666,27 @@ const cars = [
     auto: { title: "Авто:", value: "Volkswagen T5" },
     toWhom: { title: "Кому:", value: "ЗСУ (А4027, 5й ССО, \"Август\")" },
     whereTo: { title: "Куди:", value: "Запоріжжя" },
+    whereFrom: { title: "Звідки:", value: "Німеччина" },
+    price: { title: "Ціна:", value: "5500 EUR" },
+  },
+  {
+    description: [
+      { title: "Авто:", value: "Volkswagen T5" },
+      { title: "Кому:", value: "47-й окремий батальйон" },
+      { title: "Куди:", value: "Бахмут" },
+      { title: "Звідки:", value: "Німеччина" },
+      { title: "Ціна:", value: "5500 EUR" }
+    ],
+    image: volkswagenT5V7_2,
+    images: [
+      volkswagenT5V7_1,
+      volkswagenT5V7_2,
+      volkswagenT5V7_3,
+      volkswagenT5V7_4,
+    ],
+    auto: { title: "Авто:", value: "Volkswagen T5" },
+    toWhom: { title: "Кому:", value: "47-й окремий батальйон" },
+    whereTo: { title: "Куди:", value: "Бахмут" },
     whereFrom: { title: "Звідки:", value: "Німеччина" },
     price: { title: "Ціна:", value: "5500 EUR" },
   },
