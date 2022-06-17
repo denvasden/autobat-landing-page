@@ -381,6 +381,25 @@ const cars = [
   },
   {
     description: [
+      { title: "Авто:", value: "Nissan Terrano" },
+      { title: "Кому:", value: "ЗСУ (А7295)" },
+      { title: "Куди:", value: "Київ - Соледар" },
+      { title: "Звідки:", value: "Угорщина" },
+      { title: "Ціна:", value: "5500 EUR" }
+    ],
+    image: nissanPickupNavara_2,
+    images: [
+      nissanPickupNavara_1,
+      nissanPickupNavara_2,
+    ],
+    auto: { title: "Авто:", value: "Nissan Terrano" },
+    toWhom: { title: "Кому:", value: "ЗСУ (А7295)" },
+    whereTo: { title: "Куди:", value: "Київ - Соледар" },
+    whereFrom: { title: "Звідки:", value: "Угорщина" },
+    price: { title: "Ціна:", value: "5500 EUR" },
+  },
+  {
+    description: [
       { title: "Авто:", value: "Pajero Sport" },
       { title: "Кому:", value: "ЗСУ (А1736)" },
       { title: "Куди:", value: "Ізюм" },
@@ -437,7 +456,6 @@ const cars = [
       ssangyongRexton_7,
       ssangyongRexton_8,
       ssangyongRexton_9,
-      ssangyongRexton_10,
     ],
     auto: { title: "Авто:", value: "SsangYong Rexton" },
     toWhom: { title: "Кому:", value: "Поліція Києва" },
